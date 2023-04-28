@@ -16,41 +16,35 @@ import Featured from "./Featured.jsx";
 import {theme} from "./theme.jsx"
 
 function App() {
-
     return (
         <>
             <CssBaseline enableColorScheme/>
             <ThemeProvider theme={theme}>
-                <Container sx={containerStyle} maxWidth="xs">
-
-
-                    <Grid container spacing={2}>
-                        <Grid xs={7}>
+                <Container sx={containerStyle} maxWidth="xs" >
+                    <Grid container spacing={1} display="flex" alignItems="center" height="100%">
+                        <Grid xs={7} >
                             <Box sx={boxStyle}><Delivery/></Box>
                         </Grid>
-                        <Grid xs={4} xsOffset={1}>
+                        <Grid xs={4} xsOffset={1} >
                             <Box sx={boxStyle}><Notifications/></Box>
                         </Grid>
-                        <Grid xs={12}>
-                            <Box sx={boxStyle}><SearchBar/></Box>
+                        <Grid xs={12} >
+                            <Box sx={boxStyle} ><SearchBar/></Box>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid xs={12} >
                             <Box sx={boxStyle}><Categories/></Box>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid xs={12} >
                             <Box sx={boxStyle}><Featured/></Box>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid xs={12} >
                             <Box sx={boxStyle}><ShopCarousel/></Box>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid xs={12} >
                             <Box sx={boxStyle}><NavBar/></Box>
                         </Grid>
-                        <Grid xs={12}>
-                            <Copyright/>
-                        </Grid>
                     </Grid>
-
+                    <Copyright></Copyright>
                 </Container>
             </ThemeProvider>
         </>
@@ -61,11 +55,15 @@ export default App
 
 const boxStyle = {
     borderRadius: 2,
-    overflow: 'hidden',
+    padding: "0.5em",
 }
 
 const containerStyle = {
-    padding: "1em",
+    padding: "0.5em",
     borderRadius: 2,
-    backgroundColor: "#edede9"
+    backgroundColor: "#edede9",
+    maxHeight: "800px",
+    height: "100vh",
+    minWidth: "340px",
+    paddingBottom: "0.2em"
 }
