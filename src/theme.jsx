@@ -4,11 +4,12 @@ export const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#aed581',
-      light: '#f44336',
+      main: '#8CB369',
+      light: '#F4E285',
     },
     secondary: {
       main: '#f50057',
     },
   },
+
 });
