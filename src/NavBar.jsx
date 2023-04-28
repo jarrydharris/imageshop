@@ -11,7 +11,7 @@ function NavBar() {
     const [value, setValue] = useState(0);
 
     return (
-        <Box >
+        <Box style={boxStyle}>
             <BottomNavigation
                 showLabels
                 value={value}
@@ -26,6 +26,13 @@ function NavBar() {
             </BottomNavigation>
         </Box>
     );
+}
+
+const boxStyle= {
+    width: '100%',
+    height: '100%',
+    borderRadius: 2,
+    backgroundColor: '#fff',
 }
 
 export default NavBar
