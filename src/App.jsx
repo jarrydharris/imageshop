@@ -56,6 +56,7 @@ export default App
 const boxStyle = {
     borderRadius: 2,
     padding: "0.5em",
+    backgroundColor: "#fff",
 }
 
 const containerStyle = {
