@@ -430,15 +430,7 @@ function ShopCarousel() {
             "path": "./assets/Dawn_Soap_og03.jpg"
         },
         {
-            "name": "Crack",
-            "price": "$2.85",
-            "description": "amet commodo odio tortor hendrerit varius duis tristique bibendum ut vel et eu neque arcu",
-            "category": "elit",
-            "stock": "5",
-            "path": "./assets/Crack.jpg"
-        },
-        {
-            "name": "Shit Beer",
+            "name": "Beer",
             "price": "$8.52",
             "description": "tortor ultricies Amet risus volutpat sed labore purus sed aenean tortor viverra eiusmod A nullam ut massa Duis dui tellus accumsan quisque rutrum Massa nequeAdipiscing egestas Tempus do felis tempor",
             "category": "purus",
@@ -448,7 +440,7 @@ function ShopCarousel() {
     ]
 
     return (
-        <Container>
+        <Container style={containerStyle}>
             <Carousel
                 fullHeightHover={false}
                 sx={carouselStyle}
@@ -482,21 +474,21 @@ function ShopCarousel() {
 function Item(props) {
     return (
         <Card sx={{width: "100%"}}>
-            <CardActionArea>
-                <Box sx={{height: "15vh"}}>
+            <CardActionArea sx={{height: "20vh", display: "flex"}}>
+                <Box sx={{width: "100%", display: "flex", alignItems: "center"}}>
                     <CardMedia
                         component="img"
                         image={'./src/' + props.item.path}
-                        sx={{height: "6vh", width: "auto", alignSelf: "center"}}
+                        sx={{height: "12em", width: "12em"}}
                     />
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
+                        <Typography gutterBottom variant="h6" fontSize="12px" component="div">
                             {props.item.name}
                         </Typography>
-                        <Typography gutterBottom variant="body1" component="div">
+                        <Typography gutterBottom variant="body1" fontSize="10px" component="div">
                             {props.item.price}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="body2" fontSize="8px" color="text.secondary">
                             {props.item.description}
                         </Typography>
                     </CardContent>
@@ -508,7 +500,12 @@ function Item(props) {
 
 
 const carouselStyle = {
-    maxHeight: "30vh",
+    maxHeight: "20vh"
+}
+
+const containerStyle = {
+    // boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
+    maxHeight: "20vh"
 }
 export default ShopCarousel
 
