@@ -10,15 +10,21 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Delivery from "./Delivery.jsx";
 import SearchBar from "./SearchBar.jsx";
 import Categories from "./Categories.jsx";
-import Featured from "./Featured.jsx";
-import {theme} from "./theme.jsx"
+import ImageShop from "./ImageShop.jsx";
+import {useState} from "react";
 
 function App() {
+
+    const [open, setOpen] = useState(false);
+    const handleClose = () => setOpen(false);
+    const handleOpen = () => setOpen(true);
+
     return (
         <>
             <CssBaseline enableColorScheme/>
             <Container sx={outerContainerStyle} maxWidth="xs" disableGutters>
-
+                <ImageShop open={open} onClick={handleClose}>
+                </ImageShop>
                 <Grid container spacing={0} style={outerGridStyle}>
                     <Grid xs={12} sx={
                         {paddingLeft: '1em', paddingTop: '1em'}
