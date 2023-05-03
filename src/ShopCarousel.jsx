@@ -500,12 +500,15 @@ function Item(props) {
 
 
 const carouselStyle = {
-    maxHeight: "20vh"
+    minWidth: "340px",
+    width: "100vw",
+    maxWidth: "444px",
 }
 
 const containerStyle = {
-    // boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
-    maxHeight: "20vh"
+    minWidth: "340px",
+    width: "100vw",
+    maxWidth: "444px",
 }
 export default ShopCarousel
 

@@ -2,25 +2,25 @@ import {useState} from 'react';
 import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import HomeIcon from '@mui/icons-material/Home';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ReceiptIcon from "@mui/icons-material/Receipt";
 
-function NavBar() {
+function NavBar(props) {
     const [value, setValue] = useState(0);
-
     return (
         <Box style={boxStyle}>
             <BottomNavigation
+                style={navContainerStyle}
                 showLabels
                 value={value}
                 onChange={(event, newValue) => {
                     setValue(newValue);
                 }}
             >
-                <BottomNavigationAction label="Home" icon={<HomeIcon />}/>
-                <BottomNavigationAction label="ImageShop™" icon={<PhotoCameraIcon/>}/>
+                <BottomNavigationAction label="Orders" icon={<ReceiptIcon/>}/>
+                <BottomNavigationAction onClick={props.onClick} label="ImageShop™" icon={<PhotoCameraIcon/>}/>
                 <BottomNavigationAction label="Cart" icon={<ShoppingCartIcon/>}/>
                 <BottomNavigationAction label="Profile" icon={<AccountCircleIcon/>}/>
             </BottomNavigation>
@@ -28,11 +28,17 @@ function NavBar() {
     );
 }
 
-const boxStyle= {
-    width: '100%',
-    height: '100%',
-    borderRadius: 2,
-    backgroundColor: '#fff',
+const boxStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: "10vh",
+    backgroundColor: "#fff"
+}
+
+const navContainerStyle = {
+    height: "10vh",
+    minWidth: "100%"
 }
 
 export default NavBar
