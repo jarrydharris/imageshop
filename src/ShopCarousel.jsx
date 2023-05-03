@@ -1,14 +1,8 @@
 import Carousel from 'react-material-ui-carousel'
-import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {CardActionArea, Container} from '@mui/material';
-import Box from "@mui/material/Box";
-
-
-// https://github.com/oliviertassinari/react-swipeable-views
-// https://mui.com/material-ui/react-stepper/#text-with-carousel-effect
 
 
 function ShopCarousel() {
@@ -440,7 +434,7 @@ function ShopCarousel() {
     ]
 
     return (
-        <Container style={containerStyle}>
+        <Container style={containerStyle} disableGutters>
             <Carousel
                 fullHeightHover={false}
                 sx={carouselStyle}
@@ -448,23 +442,10 @@ function ShopCarousel() {
                 animation={"slide"}
                 swipe={true}
                 IndicatorIcon={''}
+
             >
                 {
-                    itemData.map(
-                        (
-                            name,
-                            price,
-                            description,
-                            path,
-                            i) =>
-                            <Item
-                                key={i}
-                                item={name}
-                                price={price}
-                                description={description}
-                                path={path}
-                            />
-                    )
+                    itemData.map((item, index) => <Item key={index} item={item}/>)
                 }
             </Carousel>
         </Container>
@@ -473,28 +454,31 @@ function ShopCarousel() {
 
 function Item(props) {
     return (
-        <Card sx={{width: "100%"}}>
-            <CardActionArea sx={{height: "20vh", display: "flex"}}>
-                <Box sx={{width: "100%", display: "flex", alignItems: "center"}}>
-                    <CardMedia
-                        component="img"
-                        image={'./src/' + props.item.path}
-                        sx={{height: "12em", width: "12em"}}
-                    />
-                    <CardContent>
-                        <Typography gutterBottom variant="h6" fontSize="12px" component="div">
-                            {props.item.name}
-                        </Typography>
-                        <Typography gutterBottom variant="body1" fontSize="10px" component="div">
-                            {props.item.price}
-                        </Typography>
-                        <Typography variant="body2" fontSize="8px" color="text.secondary">
-                            {props.item.description}
-                        </Typography>
-                    </CardContent>
-                </Box>
-            </CardActionArea>
-        </Card>
+        <CardActionArea sx={
+            {
+                display: "flex",
+                minWidth: "340px",
+                width: "100vw",
+                maxWidth: "444px",
+            }
+        }>
+            <CardMedia
+                component="img"
+                image={'./src/' + props.item.path}
+                sx={{marginTop: '1em', height: "100%", width: "50vw"}}
+            />
+            <CardContent sx={{height: "20vh", width: "50vw"}}>
+                <Typography gutterBottom variant="h4" fontSize="24px" component="div">
+                    {props.item.name}
+                </Typography>
+                <Typography gutterBottom variant="body1" fontSize="16px" component="div">
+                    {props.item.price}
+                </Typography>
+                <Typography variant="body2" fontSize="12px" color="text.secondary">
+                    {props.item.description}
+                </Typography>
+            </CardContent>
+        </CardActionArea>
     );
 }
 

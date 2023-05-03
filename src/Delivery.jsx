@@ -7,14 +7,10 @@ import Stack from '@mui/material/Stack';
 function Delivery() {
     return (
         <>
-            <Box>
-                <Typography variant="subtitle1" component="h6">Delivery address</Typography>
-            </Box>
+            <Typography variant="subtitle1" component="h6">Delivery address</Typography>
             <Stack direction="row">
-                <Box>
-                    <Typography variant="h6" component="h6">Rhodes, Sydney</Typography>
-                </Box>
-                <Box style={expandBox}>
+                <Typography variant="h6" component="h6">Rhodes, Sydney</Typography>
+                <Box style={{marginTop: "5px"}}>
                     <ExpandMoreIcon/>
                 </Box>
             </Stack>
@@ -23,8 +19,3 @@ function Delivery() {
 }
 
 export default Delivery
-
-
-const expandBox = {
-    marginTop: "5px",
-}
