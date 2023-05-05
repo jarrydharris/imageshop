@@ -20,9 +20,9 @@ function Categories() {
 function Category({style, label, icon}) {
     return (
         <>
-            <Box style={categoryContainerStyle}>
+            <Box sx={categoryContainerStyle}>
                 <Box style={style}>
-                    <FontAwesomeIcon icon={icon} size="2xl" color="#edede9d0"/>
+                    <FontAwesomeIcon icon={icon} size="sml" color="#edede9d0"/>
                 </Box>
                 <Typography>{label}</Typography>
             </Box>
@@ -31,27 +31,37 @@ function Category({style, label, icon}) {
 }
 
 const containerStyle = {
+    m:0,
+    paddingLeft:'0.5em',
+    paddingRight:'0.5em',
     display: "flex",
     justifyContent: "space-between",
     minWidth: "340px",
     width: "100vw",
     maxWidth: "444px",
+    backgroundColor: "#F2E8CF",
+    paddingBottom: '0.5em',
 }
 
 const categoryContainerStyle = {
-    display: 'grid',
-    justifyItems: 'center',
-    height: '110px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignContent: 'center',
+    gap: '0.25em',
+    color: "#33333388",
+    border: "1px solid #22222255",
+    borderRadius: 1,
+    padding: "0.5em",
+    cursor: 'pointer',
 }
 
 const iconContainerStyle = {
     display: 'grid',
     justifyItems: 'center',
     alignItems: 'center',
-    border: 1,
     borderRadius: 50,
     aspectRatio: 1,
-    width: "5em",
+    width: "2em",
 }
 
 
