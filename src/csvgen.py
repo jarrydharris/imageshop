@@ -1,7 +1,8 @@
+import csv
+import json
 import os
 import random
-import json
-import csv
+import sys
 
 lorem_ipsum = """
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
@@ -19,37 +20,48 @@ Vestibulum lorem sed risus ultricies. Egestas tellus rutrum tellus pellentesque 
 Duis ultricies lacus sed turpis tincidunt id aliquet.
 """.replace('\n', '').replace(',', '').replace('.', '')
 
-file_paths = os.listdir('./assets')
+file_paths = os.listdir('b64_assets')
+
 
 def generate_lorem_ipsum(length):
     return " ".join(random.sample(lorem_ipsum.split(" "), length))
+
 
 def generate_price():
     dollar_value = random.randint(1, 20)
     cent_value = str(random.randint(0, 9)) + str(random.randint(0, 9))
     return f'${dollar_value}.{cent_value}'
 
-if __name__ == '__fake__':
-    with open('product_data.csv', 'a+') as f:
-        if 'name,price,description,category,stock,path\n' not in f.readline():
-            f.write('name,price,description,category,stock,path\n')
 
-        for image in file_paths:
-            name = " ".join([word.capitalize() for word in image.split('.')[0].split('_')])
+if __name__ == '__main__':
+    with open('test_product_data.csv', 'w+') as f:
+        if 'name,price,description,category,stock,path\n' not in f.readline():
+            f.write('name,price,description,category,stock,path,image\n')
+
+        for image_p in file_paths:
+            name = [word.capitalize() for word in image_p.split('.')[0].split('_')]
+            if len(name) > 2:
+                name = ' '.join(name[0:2])
+            else:
+                name = name[0]
+            print(name)
             price = generate_price()
-            description = generate_lorem_ipsum(random.randint(10, 30))
+            description = generate_lorem_ipsum(random.randint(5, 10))
             category = generate_lorem_ipsum(1)
             stock = random.randint(0, 100)
-            path = f'./assets/{image}'
-            f.write(f'{name},{price},{description},{category},{stock},{path}\n')
+            path = f'b64_assets/{image_p}'
+            with open(path, 'r') as image_f:
+                image = image_f.read()
+            f.write(f'{name},{price},{description},{category},{stock},{image_p},{image}\n')
 
+csv.field_size_limit(sys.maxsize)
 
-jsonArray = []
-with open('product_data.csv', 'r') as f:
+firebase_products = {"products": {}}
+with open('test_product_data.csv', 'r') as f:
     csvReader = csv.DictReader(f)
     for row in csvReader:
-        jsonArray.append(row)
+        firebase_products["products"][row["name"]] = row
 
-with open('product_data.json', 'w') as f:
-    jsonString = json.dumps(jsonArray, indent=4)
+with open('test_product_data.json', 'w') as f:
+    jsonString = json.dumps(firebase_products, indent=4)
     f.write(jsonString)

@@ -29,7 +29,7 @@ function NavBar(props) {
 const navContainerStyle = {
     height: "80px",
     position: 'relative',
-    borderTop: '1px solid #E0E0E0',
+    borderBottom: '1px solid #E0E0E0',
     minWidth: "340px",
     maxWidth: "444px",
     bgcolor: '#fff',

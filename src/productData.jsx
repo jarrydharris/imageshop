@@ -5,7 +5,7 @@ export const productData = [
         description: 'Tortor sit turpis Odio sed fringilla eget sed ut sed facilisis lacus pharetra id amet egestas',
         category: 'et',
         stock: '77',
-        path: './assets/Strawberry.jpg'
+        path: './public/Strawberry.jpg'
     },
     {
         name: 'Honolulu Cookie',
@@ -13,7 +13,7 @@ export const productData = [
         description: 'Massa varius risus Bibendum id pellentesque risus quis do vivamus euismod vulputate nulla risus',
         category: 'consectetur',
         stock: '37',
-        path: './assets/Honolulu_Cookie.jpg'
+        path: './public/Honolulu_Cookie.jpg'
     },
     {
         name: 'Mens Vitamins',
@@ -21,7 +21,7 @@ export const productData = [
         description: 'massa pharetra euismod turpis sit mauris egestas dui ultricies ut nullam in nunc tempor lacus tincidunt vitae nulla viverra egestas scelerisque Tellus lobortis mauris aliquam Lorem felis',
         category: 'risus',
         stock: '61',
-        path: './assets/Mens_Vitamins.jpg'
+        path: './public/Mens_Vitamins.jpg'
     },
     {
         name: 'Mango Chutney',
@@ -29,7 +29,7 @@ export const productData = [
         description: 'bibendum varius elit Tempus mauris varius eget dui nunc labore quisque Duis tincidunt id urna turpis lacus ut consectetur Nunc sapien vulputate pellentesque quam eget viverra scelerisque risus',
         category: 'quis',
         stock: '2',
-        path: './assets/Mango_Chutney.png'
+        path: './public/Mango_Chutney.png'
     },
     {
         name: 'Pasta',
@@ -37,7 +37,7 @@ export const productData = [
         description: 'vitae sapien aliquet lacus massa duis Nunc risus Lorem habitant aliquet',
         category: 'quam',
         stock: '91',
-        path: './assets/Pasta.jpg'
+        path: './public/Pasta.jpg'
     },
     {
         name: 'Tabasco Green',
@@ -45,7 +45,7 @@ export const productData = [
         description: 'incididunt magna et facilisis ultrices rutrum et Tempus eiusmod sed nullam dui hendrerit in vel felis id Odio commodo Diam ut sed gravida volutpat viverra',
         category: 'tristique',
         stock: '78',
-        path: './assets/Tabasco_Green.jpg'
+        path: './public/Tabasco_Green.jpg'
     },
     {
         name: 'Coke Bottle',
@@ -53,7 +53,7 @@ export const productData = [
         description: 'felis aliquet ut rutrum Quisque lacus id Nunc tortor tincidunt risus risus vitae sed accumsan et adipiscing felis integer volutpat in Bibendum vel dolore morbi labore ipsum phasellus',
         category: 'Urna',
         stock: '87',
-        path: './assets/Coke_Bottle.jpg'
+        path: './public/Coke_Bottle.jpg'
     },
     {
         name: 'Fish Oil',
@@ -61,7 +61,7 @@ export const productData = [
         description: 'tellus condimentum ac nulla mauris eiusmod enim amet Diam scelerisque consectetur nulla urna et massa Quisque sed massa viverra volutpat quisque arcu vel ipsum',
         category: 'vitae',
         stock: '45',
-        path: './assets/fish_oil.jpg'
+        path: './public/fish_oil.jpg'
     },
     {
         name: 'Belvedere Vodka',
@@ -69,7 +69,7 @@ export const productData = [
         description: 'Tellus odio volutpat faucibus mauris ut massa euismod tortor semper elit Odio Arcu Aenean Lorem enim egestas nunc consectetur Amet dolore elit',
         category: 'dolor',
         stock: '43',
-        path: './assets/Belvedere_Vodka.jpg'
+        path: './public/Belvedere_Vodka.jpg'
     },
     {
         name: 'Dawn Soap Og01',
@@ -77,7 +77,7 @@ export const productData = [
         description: 'duis condimentum egestas eiusmod aliquam et purus ut dolore habitant diam Massa id varius faucibus Lorem massa vivamus ultrices quam sollicitudin in rutrum purus feugiat',
         category: 'sollicitudin',
         stock: '56',
-        path: './assets/Dawn_Soap_og01.jpg'
+        path: './public/Dawn_Soap_antibactertial.jpg'
     },
     {
         name: 'Dove Deoderant',
@@ -85,7 +85,7 @@ export const productData = [
         description: 'semper scelerisque et ultrices nunc vel risus amet pellentesque Tortor nullam tortor',
         category: 'arcu',
         stock: '60',
-        path: './assets/dove_deoderant.jpg'
+        path: './public/dove_deoderant.jpg'
     },
     {
         name: 'Special K',
@@ -93,7 +93,7 @@ export const productData = [
         description: 'Lorem at egestas tincidunt Enim sed lorem volutpat ac vel',
         category: 'egestas',
         stock: '3',
-        path: './assets/Special_K.jpg'
+        path: './public/Special_K.jpg'
     },
     {
         name: 'Dawn Soap Og02',
@@ -101,7 +101,7 @@ export const productData = [
         description: 'Amet viverra eget tincidunt ipsum aliquam massa mauris Tempus sollicitudin Nunc Urna quis faucibus risus massa eget egestas facilisis adipiscing nunc Aenean vulputate tortor sit tortor mauris turpis Quisque',
         category: 'Lorem',
         stock: '10',
-        path: './assets/Dawn_Soap_og02.jpg'
+        path: './public/Dawn_Soap_eco_friendly.jpg'
     },
     {
         name: 'Clorox',
@@ -109,7 +109,7 @@ export const productData = [
         description: 'tortor in ultrices varius ultricies neque tellus Nunc duis Tortor felis Bibendum morbi dolor elit id quam',
         category: 'Vestibulum',
         stock: '77',
-        path: './assets/Clorox.jpg'
+        path: './public/Clorox.jpg'
     },
     {
         name: 'Strongbow',
@@ -117,7 +117,7 @@ export const productData = [
         description: 'scelerisque rutrum in Tellus eu fringilla varius pellentesque massa gravida nequeAdipiscing tristique ultricies massa sapien Enim dolor Urna sollicitudin felis mauris',
         category: 'at',
         stock: '88',
-        path: './assets/Strongbow.jpg'
+        path: './public/Strongbow.jpg'
     },
     {
         name: 'Yan Yan',
@@ -125,7 +125,7 @@ export const productData = [
         description: 'elit do ornare et fringilla risus bibendum phasellus scelerisque tristique pharetra labore convallis nulla risus volutpat quisque at at eiusmod incididunt duis mauris egestas massa lorem dui aliquam A lobortis',
         category: 'ultricies',
         stock: '11',
-        path: './assets/Yan_Yan.jpg'
+        path: './public/Yan_Yan.jpg'
     },
     {
         name: 'Carlton Beer',
@@ -133,7 +133,7 @@ export const productData = [
         description: 'scelerisque vel rutrum justo quam at fringilla nunc aliqua vivamus quam tristique habitant tortor aenean tristique aliquet Risus sapien Urna Lorem incididunt massa dignissim varius tortor gravida Nunc mauris',
         category: 'sapien',
         stock: '57',
-        path: './assets/Carlton_Beer.jpg'
+        path: './public/Carlton_Beer.jpg'
     },
     {
         name: 'White Whine',
@@ -141,7 +141,7 @@ export const productData = [
         description: 'turpis ultricies ut tellus eget ac eu vel Lorem feugiat',
         category: 'Enim',
         stock: '5',
-        path: './assets/White_Whine.jpg'
+        path: './public/White_Whine.jpg'
     },
     {
         name: 'Peach',
@@ -149,7 +149,7 @@ export const productData = [
         description: 'vitae Aenean enim egestas risus Id sed ut egestas lacinia tristique semper Duis pharetra magna',
         category: 'aenean',
         stock: '36',
-        path: './assets/Peach.jpg'
+        path: './public/Peach.jpg'
     },
     {
         name: 'Coke Can',
@@ -157,7 +157,7 @@ export const productData = [
         description: 'elit nec eget ultricies Massa purus ornare dignissim dui euismod quam ultrices pharetra volutpat felis in ut elit bibendum in sed',
         category: 'vel',
         stock: '5',
-        path: './assets/Coke_Can.jpg'
+        path: './public/Coke_Can.jpg'
     },
     {
         name: 'Hot Cross Buns',
@@ -165,7 +165,7 @@ export const productData = [
         description: 'aliquam ultricies labore Risus fringilla odio mauris tincidunt Urna risus ut turpis sed in rutrum dui Arcu pharetra ipsum felis ac magna neque quisque lobortis ut in nulla',
         category: 'lorem',
         stock: '19',
-        path: './assets/hot_cross_buns.jpg'
+        path: './public/hot_cross_buns.jpg'
     },
     {
         name: 'Chicken Breast',
@@ -173,7 +173,7 @@ export const productData = [
         description: 'ipsum aliquet tortor Tortor lacinia pellentesque euismod gravida risus ac Bibendum arcu',
         category: 'vitae',
         stock: '65',
-        path: './assets/chicken_breast.jpg'
+        path: './public/chicken_breast.jpg'
     },
     {
         name: 'Shrimp Chips',
@@ -181,7 +181,7 @@ export const productData = [
         description: 'purus Quisque Diam risus elit sed ut nulla massa Amet euismod mauris nequeAdipiscing ultrices aliquam fringilla aenean Vestibulum',
         category: 'Tincidunt',
         stock: '7',
-        path: './assets/Shrimp_Chips.jpg'
+        path: './public/Shrimp_Chips.jpg'
     },
     {
         name: 'Naruto Drink',
@@ -189,7 +189,7 @@ export const productData = [
         description: 'risus ultricies nec duis accumsan vitae Id habitant nisl mauris elit Massa in Lorem Aenean Risus feugiat quam scelerisque phasellus diam amet magna eiusmod scelerisque ultrices eu vivamus',
         category: 'Tincidunt',
         stock: '29',
-        path: './assets/Naruto_Drink.jpg'
+        path: './public/Naruto_Drink.jpg'
     },
     {
         name: 'Murcury Cider',
@@ -197,7 +197,7 @@ export const productData = [
         description: 'lorem elit eget dolor ultricies dui quis tincidunt tellus vel consectetur lacus neque vitae viverra sed eget feugiat tristique urna Massa adipiscing',
         category: 'sed',
         stock: '4',
-        path: './assets/Murcury_Cider.jpg'
+        path: './public/Murcury_Cider.jpg'
     },
     {
         name: 'Gnocci',
@@ -205,7 +205,7 @@ export const productData = [
         description: 'justo Amet Lorem eget gravida felis tellus scelerisque accumsan sed Egestas at quis euismod Vestibulum hendrerit at egestas aenean Arcu ultricies varius quis massa quam vitae urna',
         category: 'faucibus',
         stock: '29',
-        path: './assets/Gnocci.jpg'
+        path: './public/Gnocci.jpg'
     },
     {
         name: 'Juice',
@@ -213,7 +213,7 @@ export const productData = [
         description: 'enim vel vitae risus duis purus pharetra viverra at id volutpat tristique egestas lorem semper euismod risus et enim neque risus nisi lacus fringilla eget nunc Vestibulum mauris',
         category: 'nisi',
         stock: '56',
-        path: './assets/Juice.jpg'
+        path: './public/Juice.jpg'
     },
     {
         name: 'Cruskits',
@@ -221,7 +221,7 @@ export const productData = [
         description: 'lobortis aliquet Nunc fringilla nulla elit lacinia ornare viverra do ultrices purus',
         category: 'tincidunt',
         stock: '84',
-        path: './assets/Cruskits.png'
+        path: './public/Cruskits.png'
     },
     {
         name: 'Paper Towel',
@@ -229,7 +229,7 @@ export const productData = [
         description: 'in pellentesque massa vel tortor tincidunt accumsan urna eu Quisque pharetra',
         category: 'Egestas',
         stock: '62',
-        path: './assets/paper_towel.jpg'
+        path: './public/paper_towel.jpg'
     },
     {
         name: 'Wine Bottle',
@@ -237,7 +237,7 @@ export const productData = [
         description: 'scelerisque varius gravida vivamus Tempus aenean facilisis faucibus convallis ultricies ornare egestas ac id urna elit enim egestas in tempor risus ut vitae risus quam mauris',
         category: 'dolore',
         stock: '80',
-        path: './assets/Wine_Bottle.jpg'
+        path: './public/Wine_Bottle.jpg'
     },
     {
         name: 'Cascade Beer',
@@ -245,7 +245,7 @@ export const productData = [
         description: 'labore pellentesque lobortis Bibendum neque rutrum aliqua sed risus nullam risus Tortor neque Egestas convallis aliquet ornare Enim',
         category: 'risus',
         stock: '38',
-        path: './assets/Cascade_Beer.jpg'
+        path: './public/Cascade_Beer.jpg'
     },
     {
         name: 'Dawn Soap Og04',
@@ -253,7 +253,7 @@ export const productData = [
         description: 'quis bibendum Tortor tellus et tortor at adipiscing elit gravida et Aenean',
         category: 'adipiscing',
         stock: '17',
-        path: './assets/Dawn_Soap_og04.jpg'
+        path: './public/Dawn_Soap_botanicals.jpg'
     },
     {
         name: 'Pop Tarts',
@@ -261,7 +261,7 @@ export const productData = [
         description: 'in volutpat nisl Arcu Diam egestas tincidunt lobortis phasellus enim',
         category: 'Urna',
         stock: '27',
-        path: './assets/Pop_Tarts.jpg'
+        path: './public/Pop_Tarts.jpg'
     },
     {
         name: 'Brocollini',
@@ -269,7 +269,7 @@ export const productData = [
         description: 'et Massa ipsum eget vitae nunc Lorem viverra scelerisque lacus Aenean sed scelerisque incididunt adipiscing Tortor vitae nulla nullam Id ut Egestas Urna urna Vestibulum nulla egestas quis',
         category: 'risus',
         stock: '28',
-        path: './assets/brocollini.jpg'
+        path: './public/brocollini.jpg'
     },
     {
         name: 'Lynx',
@@ -277,7 +277,7 @@ export const productData = [
         description: 'ut quisque egestas egestas incididunt ultricies habitant aliquam massa Tempus quis eget id Egestas urna purus faucibus quis risus dolore amet egestas tincidunt elit Vestibulum aliquet egestas odio tincidunt',
         category: 'lacus',
         stock: '6',
-        path: './assets/Certified_Chick_Magnet.jpg'
+        path: './public/axe.jpg'
     },
     {
         name: 'Stella Artois',
@@ -285,7 +285,7 @@ export const productData = [
         description: 'viverra accumsan semper nec aliqua tellus at nulla lacinia morbi elit Bibendum tincidunt dui eget risus rutrum aliquam sed habitant tortor',
         category: 'in',
         stock: '66',
-        path: './assets/Stella_Artois.jpg'
+        path: './public/Stella_Artois.jpg'
     },
     {
         name: 'Diabetes',
@@ -293,7 +293,7 @@ export const productData = [
         description: 'risus eu amet ac quis ut dui quam tortor habitant elit nunc morbi nisl nulla massa risus nequeAdipiscing viverra',
         category: 'lacus',
         stock: '83',
-        path: './assets/Diabetes.jpg'
+        path: './public/Diabetes_health_pack.jpg'
     },
     {
         name: 'Tabasco',
@@ -301,7 +301,7 @@ export const productData = [
         description: 'id tincidunt Id nisi risus sed scelerisque duis phasellus mauris pellentesque ultricies egestas adipiscing fringilla neque quis consectetur',
         category: 'neque',
         stock: '30',
-        path: './assets/Tabasco.jpg'
+        path: './public/Tabasco.jpg'
     },
     {
         name: 'Dog Trainer',
@@ -309,7 +309,7 @@ export const productData = [
         description: 'condimentum scelerisque Egestas nec risus phasellus neque at turpis nisi ut elit duis massa urna nulla sed hendrerit eget egestas dignissim vivamus pulvinar neque incididunt purus sed do',
         category: 'lacinia',
         stock: '62',
-        path: './assets/Dog_Trainer.jpg'
+        path: './public/Dog_Trainer.jpg'
     },
     {
         name: 'Juice 3pack',
@@ -317,7 +317,7 @@ export const productData = [
         description: 'Tortor nec varius et id vel labore egestas Odio quisque tristique commodo Vestibulum in pellentesque quis lobortis eiusmod amet risus Tellus incididunt condimentum gravida',
         category: 'phasellus',
         stock: '39',
-        path: './assets/Juice_3pack.jpg'
+        path: './public/Juice_3pack.jpg'
     },
     {
         name: 'Arnotts Assorted Creams',
@@ -325,7 +325,7 @@ export const productData = [
         description: 'quis A massa viverra rutrum pellentesque Diam at duis volutpat aliquam quam sed at eiusmod lorem faucibus tempor vulputate rutrum in volutpat gravida quam',
         category: 'in',
         stock: '84',
-        path: './assets/Arnotts_Assorted_Creams.jpg'
+        path: './public/Arnotts_Assorted_Creams.jpg'
     },
     {
         name: 'Cup Noodles',
@@ -333,7 +333,7 @@ export const productData = [
         description: 'eget fringilla Duis ut vivamus Bibendum felis integer dui vel Lorem pharetra sed volutpat in',
         category: 'dolor',
         stock: '96',
-        path: './assets/cup_noodles.jpg'
+        path: './public/cup_noodles.jpg'
     },
     {
         name: 'Dog Treats',
@@ -341,7 +341,7 @@ export const productData = [
         description: 'in varius egestas ultricies rutrum vivamus justo Nunc sed elit quis aliquet habitant id Odio aliquam',
         category: 'lacus',
         stock: '16',
-        path: './assets/Dog_Treats.jpg'
+        path: './public/Dog_Treats.jpg'
     },
     {
         name: 'Honolulu Cookies Blue',
@@ -349,7 +349,7 @@ export const productData = [
         description: 'nullam condimentum feugiat neque eu volutpat do nulla quis felis eiusmod quam urna nec amet',
         category: 'in',
         stock: '75',
-        path: './assets/Honolulu_Cookies_Blue.jpg'
+        path: './public/Honolulu_Cookies_Blue.jpg'
     },
     {
         name: 'Popcorn',
@@ -357,7 +357,7 @@ export const productData = [
         description: 'tincidunt viverra vivamus pharetra duis dolore ipsum Odio ut sollicitudin aliqua felis nulla vel quis feugiat Tincidunt sed risus tristique sed viverra do eget sed lorem nulla aliquam et rutrum',
         category: 'vulputate',
         stock: '97',
-        path: './assets/Popcorn.jpg'
+        path: './public/Popcorn.jpg'
     },
     {
         name: 'Lysol',
@@ -365,7 +365,7 @@ export const productData = [
         description: 'massa duis labore vivamus elit neque purus urna gravida viverra risus nunc dignissim in pharetra sed vitae rutrum',
         category: 'at',
         stock: '81',
-        path: './assets/Lysol.jpg'
+        path: './public/Lysol.jpg'
     },
     {
         name: 'Sou Sauce',
@@ -373,7 +373,7 @@ export const productData = [
         description: 'scelerisque egestas tortor ultricies habitant massa tincidunt Id scelerisque sed risus scelerisque sed facilisis tristique varius id accumsan nunc pulvinar lorem Tellus diam eget dui duis aliquet sed vel magna',
         category: 'accumsan',
         stock: '4',
-        path: './assets/Sou_Sauce.jpg'
+        path: './public/Soy_Sauce.jpg'
     },
     {
         name: 'Shoe Repair',
@@ -381,7 +381,7 @@ export const productData = [
         description: 'varius feugiat scelerisque massa Tellus tempor in nulla sed do mauris risus sapien habitant Urna Massa faucibus ac et nisi tincidunt neque Tempus aliquam facilisis pellentesque quis dui risus',
         category: 'lobortis',
         stock: '14',
-        path: './assets/shoe_repair.jpg'
+        path: './public/shoe_repair.jpg'
     },
     {
         name: 'Stax',
@@ -389,7 +389,7 @@ export const productData = [
         description: 'egestas fringilla tristique pellentesque at habitant massa semper Bibendum egestas scelerisque Massa commodo eget ultricies ultricies tempor',
         category: 'A',
         stock: '52',
-        path: './assets/Stax.jpg'
+        path: './public/Stax.jpg'
     },
     {
         name: 'Parmolive Hand Soap',
@@ -397,7 +397,7 @@ export const productData = [
         description: 'Enim Lorem Arcu accumsan rutrum aliquet Risus enim Aenean amet',
         category: 'tincidunt',
         stock: '46',
-        path: './assets/Parmolive_Hand_Soap.png'
+        path: './public/Parmolive_Hand_Soap.png'
     },
     {
         name: 'Bottled Water',
@@ -405,7 +405,7 @@ export const productData = [
         description: 'ipsum eget sed lacinia risus nullam volutpat tellus elit Tellus duis',
         category: 'Id',
         stock: '81',
-        path: './assets/Bottled_Water.jpg'
+        path: './public/Bottled_Water.jpg'
     },
     {
         name: 'Dawn Soap Og03',
@@ -413,7 +413,7 @@ export const productData = [
         description: 'odio Tempus neque Tincidunt vulputate Odio mauris dolore incididunt tortor viverra enim tellus justo ipsum gravida eget viverra Tortor accumsan Bibendum rutrum lorem tellus pulvinar',
         category: 'pellentesque',
         stock: '45',
-        path: './assets/Dawn_Soap_og03.jpg'
+        path: './public/Dawn_Soap_apple.jpg'
     },
     {
         name: 'Beer',
@@ -421,6 +421,6 @@ export const productData = [
         description: 'tortor ultricies Amet risus volutpat sed labore purus sed aenean tortor viverra eiusmod A nullam ut massa Duis dui tellus accumsan quisque rutrum Massa nequeAdipiscing egestas Tempus do felis tempor',
         category: 'purus',
         stock: '24',
-        path: './assets/Shit_Beer.jpg'
+        path: './public/Heineken_Beer.jpg'
     }
 ]

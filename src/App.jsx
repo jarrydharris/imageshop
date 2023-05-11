@@ -8,8 +8,30 @@ import NavBar from "./NavBar.jsx";
 import ShopCarousel from "./ShopCarousel.jsx";
 import Delivery from "./Delivery.jsx";
 import ImageShop from "./ImageShop.jsx";
-import {useState} from "react";
+import LoaderAnimation from "./LoaderAnimation.jsx";
+import {useEffect, useState} from "react";
 
+import {initializeApp} from "firebase/app";
+import {get, getDatabase, ref} from "firebase/database";
+
+// TODO: Replace the following with your app's Firebase project configuration
+// See: https://firebase.google.com/docs/web/learn-more#config-object
+const firebaseConfig = {
+    apiKey: "AIzaSyBE_mRxYsieNoTHWDr86rJxAViK7BXDyYA",
+    authDomain: "phone-camera-app-a34e8.firebaseapp.com",
+    databaseURL: "https://phone-camera-app-a34e8-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "phone-camera-app-a34e8",
+    storageBucket: "phone-camera-app-a34e8.appspot.com",
+    messagingSenderId: "204972217957",
+    appId: "1:204972217957:web:54eb46b60a1031b1cad88c",
+    measurementId: "G-7B11115KHV",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Initialize Realtime Database and get a reference to the service
+const database = getDatabase(app);
 
 function App() {
 
@@ -17,14 +39,25 @@ function App() {
     const handleClose = () => setOpen(false);
     const handleOpen = () => setOpen(true);
 
+    const [itemData, setItemData] = useState(null);
+    const dbRef = ref(database);
+    useEffect(() => {
+        get(dbRef, '').then((snapshot) => {
+            setItemData(snapshot.val().products);
+        })
+    }, [dbRef]);
+
     return (
         <>
             <CssBaseline enableColorScheme/>
             <Container sx={outerContainerStyle} maxWidth="xs" disableGutters>
                 <ImageShop open={open} onClick={handleClose}/>
-                <Delivery/>
-                <ShopCarousel/>
                 <NavBar onClick={handleOpen}/>
+                {itemData ?
+                    <ShopCarousel itemData={itemData}/> :
+                    <LoaderAnimation/>
+                }
+                <Delivery/>
             </Container>
         </>
     )
@@ -36,7 +69,6 @@ const outerContainerStyle = {
     display: "flex",
     flexDirection: "column",
     alignItems: "stretch",
-    borderRadius: 2,
     backgroundColor: "#fff",
     minHeight: "600px",
     height: "100vh",
@@ -46,3 +78,4 @@ const outerContainerStyle = {
     maxWidth: "444px",
     overflow: 'hidden',
 }
+
