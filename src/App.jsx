@@ -11,8 +11,11 @@ import ImageShop from "./ImageShop.jsx";
 import LoaderAnimation from "./LoaderAnimation.jsx";
 import {useEffect, useState} from "react";
 
+
 import {initializeApp} from "firebase/app";
 import {get, getDatabase, ref} from "firebase/database";
+import Cart from "./Cart.jsx";
+import ImageShopButton from "./ImageShopButton.jsx";
 
 // TODO: Replace the following with your app's Firebase project configuration
 // See: https://firebase.google.com/docs/web/learn-more#config-object
@@ -33,12 +36,10 @@ const app = initializeApp(firebaseConfig);
 // Initialize Realtime Database and get a reference to the service
 const database = getDatabase(app);
 
+
 function App() {
 
-    const [open, setOpen] = useState(false);
-    const handleClose = () => setOpen(false);
-    const handleOpen = () => setOpen(true);
-
+    // Get product data from firebase
     const [itemData, setItemData] = useState(null);
     const dbRef = ref(database);
     useEffect(() => {
@@ -47,17 +48,33 @@ function App() {
         })
     }, [dbRef]);
 
+    // Open or close image shop modal
+    const [open, setOpen] = useState(false);
+    const handleClose = () => setOpen(false);
+    const handleOpen = () => setOpen(true);
+
+    // Conditionally render main page
+    const [selectedButton, setSelectedButton] = useState("home");
+
+    const handleNavClick = (buttonName) => {
+        setSelectedButton(buttonName);
+    };
+
+
     return (
         <>
             <CssBaseline enableColorScheme/>
             <Container sx={outerContainerStyle} maxWidth="xs" disableGutters>
-                <ImageShop open={open} onClick={handleClose}/>
-                <NavBar onClick={handleOpen}/>
-                {itemData ?
+                <ImageShop open={open} onClick={handleClose} itemData={itemData}/>
+                <ImageShopButton onClick={handleOpen}/>
+                <NavBar onClick={handleNavClick}/>
+                {itemData && selectedButton === "home" ?
                     <ShopCarousel itemData={itemData}/> :
                     <LoaderAnimation/>
                 }
+                {selectedButton === "cart" ? <Cart/> : null}
                 <Delivery/>
+
             </Container>
         </>
     )
@@ -77,5 +94,6 @@ const outerContainerStyle = {
     width: "100vw",
     maxWidth: "444px",
     overflow: 'hidden',
+    position: 'relative'
 }
 

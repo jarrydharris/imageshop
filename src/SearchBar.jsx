@@ -25,7 +25,6 @@ export default function SearchBar() {
                         size="small"
                         variant="outlined"
                         InputProps={{
-                            // style: {border: '1px solid #F2E8CF', borderRadius: '2px'},
                             startAdornment: (
                                 <InputAdornment position="end">
                                     <SearchIcon/>

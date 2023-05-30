@@ -2,8 +2,8 @@ import {useState} from 'react';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import HomeIcon from '@mui/icons-material/Home';
 
 function NavBar(props) {
     const [value, setValue] = useState(0);
@@ -16,11 +16,22 @@ function NavBar(props) {
                 setValue(newValue);
             }}
         >
-            <BottomNavigationAction sx={{...bottomNavStyle, paddingLeft: '2em'}} onClick={props.onClick}
-                                    label="ImageShop™" icon={<PhotoCameraIcon/>}/>
-            <BottomNavigationAction sx={bottomNavStyle} label="Cart" icon={<ShoppingCartIcon/>}/>
-            <BottomNavigationAction sx={{...bottomNavStyle, paddingLeft: '2em'}} label="Profile"
-                                    icon={<AccountCircleIcon/>}/>
+            <BottomNavigationAction
+                sx={{...bottomNavStyle, paddingLeft: '2em'}}
+                onClick={()=> {props.onClick("home");}}
+                label="Home" icon={<HomeIcon/>}
+            />
+            <BottomNavigationAction
+                sx={bottomNavStyle}
+                onClick={()=> {props.onClick("cart");}}
+                label="Cart"
+                icon={<ShoppingCartIcon/>}
+            />
+            <BottomNavigationAction
+                sx={{...bottomNavStyle, paddingLeft: '2em'}}
+                label="Profile"
+                icon={<AccountCircleIcon/>}
+            />
         </BottomNavigation>
     );
 }
