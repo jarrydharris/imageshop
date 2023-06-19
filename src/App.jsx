@@ -13,12 +13,10 @@ import {useEffect, useState} from "react";
 
 
 import {initializeApp} from "firebase/app";
-import {get, getDatabase, ref} from "firebase/database";
+import {get, getDatabase, ref, set} from "firebase/database";
 import Cart from "./Cart.jsx";
 import ImageShopButton from "./ImageShopButton.jsx";
 
-// TODO: Replace the following with your app's Firebase project configuration
-// See: https://firebase.google.com/docs/web/learn-more#config-object
 const firebaseConfig = {
     apiKey: "AIzaSyBE_mRxYsieNoTHWDr86rJxAViK7BXDyYA",
     authDomain: "phone-camera-app-a34e8.firebaseapp.com",
@@ -40,13 +38,22 @@ const database = getDatabase(app);
 function App() {
 
     // Get product data from firebase
-    const [itemData, setItemData] = useState(null);
-    const dbRef = ref(database);
+    const [productData, setProductData] = useState(null);
+    const dbRef = ref(database, 'products');
     useEffect(() => {
         get(dbRef, '').then((snapshot) => {
-            setItemData(snapshot.val().products);
+            setProductData(snapshot.val());
         })
     }, [dbRef]);
+
+    // Get cart data from firebase
+    const [cartData, setCartData] = useState([]);
+
+    // Add item to cart
+    const handleAddItemToCart = (item) => {
+        console.log("add item called");
+        setCartData([...cartData, item]);
+    }
 
     // Open or close image shop modal
     const [open, setOpen] = useState(false);
@@ -65,14 +72,24 @@ function App() {
         <>
             <CssBaseline enableColorScheme/>
             <Container sx={outerContainerStyle} maxWidth="xs" disableGutters>
-                <ImageShop open={open} onClick={handleClose} itemData={itemData}/>
+                <ImageShop
+                    open={open}
+                    onClick={handleClose}
+                    itemData={productData}
+                />
                 <ImageShopButton onClick={handleOpen}/>
                 <NavBar onClick={handleNavClick}/>
-                {itemData && selectedButton === "home" ?
-                    <ShopCarousel itemData={itemData}/> :
-                    <LoaderAnimation/>
+                {selectedButton === "home" ?
+                    (
+                        productData ?
+                        <ShopCarousel
+                            itemData={productData}
+                            handleAddItemToCart={handleAddItemToCart}
+                        /> :
+                        <LoaderAnimation/>
+                     ) : null
                 }
-                {selectedButton === "cart" ? <Cart/> : null}
+                {selectedButton === "cart" ? <Cart itemData={cartData}/> : null}
                 <Delivery/>
 
             </Container>

@@ -1,8 +1,8 @@
 import Typography from '@mui/material/Typography';
 import {ImageList, ImageListItem} from '@mui/material';
-import AddCircleIcon from '@mui/icons-material/AddCircle';
 import Box from "@mui/material/Box";
-import IconButton from "@mui/material/IconButton";
+import AddToCartButton from "./AddToCartButton.jsx";
+
 
 function ShopCarousel(props) {
 
@@ -22,9 +22,7 @@ function ShopCarousel(props) {
                             <Typography sx={attentionStyle} variant="h2" fontWeight="bold"
                                         fontSize="14px">{value.price}</Typography>
                         </Box>
-                        <IconButton aria-label="add-to-cart" size="small">
-                            <AddCircleIcon sx={{...attentionStyle,}}/>
-                        </IconButton>
+                        <AddToCartButton onClick={props.handleAddItemToCart} itemData={value}/>
                     </Box>
                 </ImageListItem>
             ))}
